@@ -20,7 +20,7 @@ def hello():
         visits = "<i>cannot connect to Redis, counter disabled</i>"
     
     VISITS_COUNTER.inc()
-    html = "<h3>Hello {name}!</h3>" \
+    html = "<h3>Welcome and Hello {name}!</h3>" \
                 "<b>Hostname:</b> {hostname}<br/>" \
                 "<b>Visits:</b> {visits}"
     return html.format(name=os.getenv("NAME", "world"), hostname=socket.gethostname(), visits=visits)
